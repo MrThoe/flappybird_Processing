@@ -1,0 +1,50 @@
+/* Arrays and Loops Tutorial  -- FOR LOOP
+ * Language: Processing  (Java)
+ * Author: Allen Thoe
+ * Date: 11/13/2019  */
+ 
+int x, y, Vx, Vy;
+int[] a, b, Va, Vb; //DECLARING
+int numBalls;
+
+//INITIAL Function
+void setup()
+{
+  size(800, 800);
+  x = 40;
+  y = 100;
+  Vx = 5;
+  numBalls = 700;
+  a = new int[numBalls]; //INITIALIZES
+  b = new int[numBalls]; //[0,0,0,0,0,0,0]
+  Va = new int[numBalls]; //[Va[0], Va[1], Va[2], Va[3]....]
+  Vb = new int[numBalls];
+  for(int i = 0; i < numBalls; i++)
+  {
+      a[i] = (int)random(width);
+      b[i] = (int)random(height);
+      Va[i] = (int)random(5);
+      Vb[i] = (int)random(-5,5);
+  }
+}
+
+//Infinite Loop
+void draw()
+{
+  background(100, 0, 0);
+  for(int i = 0; i < numBalls; i++)
+  {
+    circle(a[i], b[i], 25);
+    a[i] = a[i] + Va[i];
+    b[i] = b[i] + Vb[i];
+    if(a[i] > width || a[i] < 0)
+    {
+      Va[i] = Va[i]*-1;  
+    }
+    if(b[i] > height || b[i] < 0)
+    {
+      Vb[i] = Vb[i]*-1;  
+    }    
+  }
+
+}
