@@ -1,7 +1,7 @@
 /* FLAPPY BIRD IN PROCESSING
- * This goes goes with the 3rd video in my Flappy Bird Tutorial
+ * This goes goes with the 4th video in my Flappy Bird Tutorial
  * Author: Allen Thoe
- * Date: 11/8/2019
+ * Date: 11/13/2019
  * Language:  Processing (Version of Java)
  * Download: https://processing.org/download/
  */
