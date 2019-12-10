@@ -45,7 +45,7 @@ void draw()
     setBg();
     setPipes();
     kirby(); //PUTS KIRBY ON TOP -- Draws him last
-    score();
+    displayScore();
   }
   else
   {
@@ -87,7 +87,7 @@ void restart()
      } 
    }
 }
-void score()
+void displayScore()
 {
   if(score>highScore)
   {
